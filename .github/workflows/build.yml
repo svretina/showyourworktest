@@ -17,6 +17,8 @@ jobs:
       - name: Build the article PDF
         id: build
         uses: showyourwork/showyourwork-action@v1
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
         env:
           SANDBOX_TOKEN: ${{ secrets.SANDBOX_TOKEN }}
           OVERLEAF_EMAIL: ${{ secrets.OVERLEAF_EMAIL }}
